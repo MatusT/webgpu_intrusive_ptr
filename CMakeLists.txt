@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.29)
+
+project(cpp2example)
+
+find_package(Boost REQUIRED COMPONENTS smart_ptr)
+
+add_executable(01_intrusive_ptr 01_intrusive_ptr.cpp)
+target_compile_features(01_intrusive_ptr PRIVATE cxx_std_23)
+target_link_libraries(01_intrusive_ptr PRIVATE Boost::smart_ptr)
+
+add_executable(02_intrusive_ptr_hive 02_intrusive_ptr_hive.cpp)
+target_compile_features(02_intrusive_ptr_hive PRIVATE cxx_std_23)
+target_link_libraries(02_intrusive_ptr_hive PRIVATE Boost::smart_ptr)
+
+add_executable(03_intrusive_hive_singletonhub 03_intrusive_hive_singletonhub.cpp)
+target_compile_features(03_intrusive_hive_singletonhub PRIVATE cxx_std_23)
+target_link_libraries(03_intrusive_hive_singletonhub PRIVATE Boost::smart_ptr)
